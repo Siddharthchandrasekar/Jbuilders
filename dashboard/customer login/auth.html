@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JBuilders</title>
+  <!-- Add Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <link rel="stylesheet" href="auth.css">
+  <!-- Your web app's Firebase configuration -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA_4Lgt18COnZ_dKwtw2bUJET2gXdDgLtU",
+      authDomain: "j-builders.firebaseapp.com",
+      databaseURL: "https://j-builders-default-rtdb.firebaseio.com",
+      projectId: "j-builders",
+      storageBucket: "j-builders.appspot.com",
+      messagingSenderId: "864477014685",
+      appId: "1:864477014685:web:89b310ee371b484fef0274"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+  <div id="loginForm">
+    <h1 style="padding-top: 15px">Login Now</h1>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="button" id="loginbtn">Login</button>
+    <h5>New to here! <a class="ghost" id="slink" style="color:#1c8b1c;"><u>Sign Up</u></a></h5>
+  </div>
+</div>
+<div class="form-container sign-up-container">
+<div id="signupForm">
+  <h1 style="padding-top: 15px"> Create Account</h1>
+  <input type="email" id="signupEmail" placeholder="Email" required>
+  <input type="password" id="signupPassword" placeholder="Password" required>
+  <input type="text" id="username" placeholder="Username" required>
+  <select id="userType" required>
+    <option value="worker">Worker</option>
+    <option value="engineer">Engineer</option>
+    <option value="customer">Customer</option>
+  </select>
+  <button type="button"id="signupbtn">Sign Up</button>
+  <h5>Already have an account! <a class="ghost" id="sslink" style="color:#1c8b1c;"><u>Sign In</u></a></h5>
+</div>
+</div>
+<div class="overlay-container">
+  <div class="overlay">
+      <div class="overlay-panel overlay-left">
+          <img src="https://images.pexels.com/photos/7599735/pexels-photo-7599735.jpeg?auto=compress&cs=tinysrgb&w=600" alt="movie-1"/>
+      </div>
+
+      <div class="overlay-panel overlay-right">
+          <img src="https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&w=600" alt="movie-2"/>
+      </div>
+  </div>
+</div>
+</div>
+  <div id="userInfo"></div>
+  <script>
+    const signUpButton = document.getElementById('slink');
+    const signInButton = document.getElementById('sslink');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+<script type="module" src="auth.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.profile {
+    background-color: #ffffff50;
+    margin-top: 1em;
+    padding: 3em;
+    border-radius: 1em;
+    justify-content: center;
+    box-shadow: 1px 2px 5px 4px rgba(192, 187, 187, 0.711);
+    text-align: center; /* Added to center the content horizontally */
+}
+
+.profile p {
+    color: blue;
+}
+ input{
+    border: 2px solid red;
+ }
+.profile span {
+    color: rgb(0, 0, 0);
+}
+
+.form-control {
+    background-color: rgba(24, 28, 32, 0.016);
+    color: rgba(0, 0, 0, 0.281);
+}
+
+img {
+    width: 10em;
+    border-radius: 50%; /* Added to create a circular border */
+    border: none; /* Remove the default border */
+}
+button {
+    border: none; /* Remove the border */
+    padding: 0; /* Remove padding */
+    background: transparent; /* Remove background color */
+}
+
+#update{
+    border-radius: 10px;
+    padding:10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.785);
+    color: white;
+}

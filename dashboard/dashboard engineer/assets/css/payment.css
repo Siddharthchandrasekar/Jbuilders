@@ -1,0 +1,133 @@
+.container.transaction-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+.container.transaction-form input {
+    color: #432000;
+    background-color: #DCE1EB;
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    margin: 10px 0;
+}
+
+.container.transaction-form button {
+    color: #FDFDFD;
+    background-color: #AC485A;
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container.transaction-form button {
+    /* existing styles */
+    margin-bottom: 20px; /* Add space below the button */
+}
+
+.container.transaction-form ul li {
+    /* existing styles */
+    width: calc(100% - 40px); /* Calculate width to match container width */
+    max-width: 280px; /* Set maximum width to maintain responsiveness */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+
+.container.transaction-form button:hover {
+    background-color: #432000;
+    cursor: pointer;
+}
+
+.container.transaction-form ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Add space between items */
+}
+
+.container.transaction-form ul li {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust item width for 3 items per row with space between */
+    font-size: 20px;
+    background-color: #FFFDF8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Add space below each item */
+    width: 500px;
+}
+
+.container.transaction-form ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+}
+
+.container.transaction-form .lists-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container.transaction-form #shopping-list {
+    margin-bottom: 20px; /* Add space between shopping list and transaction list */
+}
+
+.container.transaction-form #transaction-list {
+    align-self: flex-end; /* Align transaction list to the right */
+    width: 100%; /* Utilize the complete width */
+    background-color: #fdfdfd00; /* Optional: Add background color to transaction list */
+    padding: 10px; /* Optional: Add padding to transaction list */
+}
+.lists-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px; /* Maintain maximum width */
+    margin: 30px auto; /* Maintain margin */
+}
+
+.lists-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Display the list items horizontally */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Add space between items */
+    width: 100%;
+}
+
+.lists-container ul li {
+    flex: 0 0 calc(66.66% - 20px); /* Adjust item width for 3 items per row with space between */
+    font-size: 20px;
+    background-color: #FFFDF8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom:10px; /* Add space below each item */
+    width: 500px;
+}
+
+.lists-container ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+}
+
+#shopping-list {
+    margin-bottom: 20px; /* Add space between shopping list and transaction list */
+}
+
+#transaction-list {
+    align-self: flex-end; /* Align transaction list to the right */
+    width: 100%; /* Utilize the complete width */
+    background-color: #fdfdfd00; /* Optional: Add background color to transaction list */
+    padding: 10px; /* Optional: Add padding to transaction list */
+}

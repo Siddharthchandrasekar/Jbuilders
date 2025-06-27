@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+    <title>JBuilders</title>
+
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/profile.css">
+  </head>
+  <body>
+    <!-- ======== Preloader =========== -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+    <!-- ======== Preloader =========== -->
+
+    <!-- ======== sidebar-nav start =========== -->
+    <aside class="sidebar-nav-wrapper">
+      <div class="navbar-logo">
+        <a href="index.html">
+          Jbuilders
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="nav-item nav-item-has-children">
+            <a
+              href="#0"
+              data-bs-toggle="collapse"
+              data-bs-target="#ddmenu_1"
+              aria-controls="ddmenu_1"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" />
+                  <path
+                    d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" />
+                </svg>
+              </span>
+              <span class="text">Dashboard</span>
+            </a>
+            <ul id="ddmenu_1" class="collapse show dropdown-nav">
+              <li>
+                <a href="profile.html" class="active"> Profile </a>
+              </li>
+              <li>
+                <a href="person.html" class="active"> To-Do </a>
+              </li>
+              <li>
+                <a href="map.html" class="active"> Map View </a>
+              </li>
+              <li>
+                <a href="report.html" class="active"> Report </a>
+              </li>
+              <li>
+                <a href="payment.html" class="active"> Payment </a>
+              </li>
+            </ul>
+          </li>
+    </aside>
+    <div class="overlay"></div>
+    <!-- ======== sidebar-nav end =========== -->
+
+    <!-- ======== main-wrapper start =========== -->
+    <main class="main-wrapper">
+      <!-- ========== header start ========== -->
+      <header class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-7 col-md-7 col-6">
+              <div class="header-right">
+                <!-- notification start -->
+                <!-- message end -->
+                <!-- profile end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ========== header end ========== -->
+
+      <!-- ========== section start ========== -->
+      <section class="section">
+        <div class="container-fluid">
+          <!-- ========== title-wrapper start ========== -->
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="title">
+                  <h2>Profile</h2>
+                </div>
+              </div>
+              <!-- end col -->
+          
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+      <!-- ========== section end ========== -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-0 col-md-2"></div>
+                <div class="col-sm-12 col-md-8">
+                    <div class="profile">
+                        <button id="choose-btn">
+                            <img id="preview" src="data:image/jpeg;base64,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"  alt="...">
+                        </button>
+                    
+                        <div class="form-group">
+                          <label for="name" >Name</label>
+                          <input
+                            type="text"
+                            required
+                            class="form-control"
+                            id="name"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email address</label>
+                          <input
+                            required
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="email">User Type</label>
+                          <input
+                            required
+                            type="text"
+                            class="form-control"
+                            id="usertype"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="Password">Phone Number</label>
+                          <input
+                            required
+                            type="number"
+                            class="form-control"
+                            id="number"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="date">Date Of Birth</label>
+                          <input
+                            required
+                            type="date"
+                            class="form-control"
+                            id="dob"
+                          />
+                        </div>
+                        <p id="msg"></p>
+                        
+                        <button id="update">Update</button>
+                    </div>
+                </div> 
+                <div class="col-sm-0 col-md-2"></div>
+            </div>
+        </div>
+        </div>
+      </div>
+     
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/profile.js"></script>
+    <script type="module" >
+      // Your JavaScript code here
+      var chooseBtn = document.getElementById('choose-btn');
+      var hoverText = document.getElementById('hover-text');
+      var previewImg = document.getElementById('preview');
+
+             function handleFileInput(event) {
+          var file = event.target.files[0];
+          var reader = new FileReader();
+          reader.onload = function() {
+              previewImg.src = reader.result;
+          }
+          reader.readAsDataURL(file);
+      }
+
+      chooseBtn.addEventListener('click', function() {
+          var fileInput = document.createElement('input');
+          fileInput.type = 'file';
+          fileInput.accept = 'image/*';
+          fileInput.addEventListener('change', handleFileInput);
+          fileInput.click();
+      });
+  </script>
+    <script>
+      // ======== jvectormap activation
+      var markers = [
+        { name: "Egypt", coords: [26.8206, 30.8025] },
+        { name: "Russia", coords: [61.524, 105.3188] },
+        { name: "Canada", coords: [56.1304, -106.3468] },
+        { name: "Greenland", coords: [71.7069, -42.6043] },
+        { name: "Brazil", coords: [-14.235, -51.9253] },
+      ];
+
+      var jvm = new jsVectorMap({
+        map: "world_merc",
+        selector: "#map",
+        zoomButtons: true,
+
+        regionStyle: {
+          initial: {
+            fill: "#d1d5db",
+          },
+        },
+
+        labels: {
+          markers: {
+            render: (marker) => marker.name,
+          },
+        },
+
+        markersSelectable: true,
+        selectedMarkers: markers.map((marker, index) => {
+          var name = marker.name;
+
+          if (name === "Russia" || name === "Brazil") {
+            return index;
+          }
+        }),
+        markers: markers,
+        markerStyle: {
+          initial: { fill: "#4A6CF7" },
+          selected: { fill: "#ff5050" },
+        },
+        markerLabelStyle: {
+          initial: {
+            fontWeight: 400,
+            fontSize: 14,
+          },
+        },
+      });
+      // ====== calendar activation
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarMiniEl = document.getElementById("calendar-mini");
+        var calendarMini = new FullCalendar.Calendar(calendarMiniEl, {
+          initialView: "dayGridMonth",
+          headerToolbar: {
+            end: "today prev,next",
+          },
+        });
+        calendarMini.render();
+      });
+
+      // =========== chart one start
+      const ctx1 = document.getElementById("Chart1").getContext("2d");
+      const chart1 = new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Fab",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "",
+              backgroundColor: "transparent",
+              borderColor: "#365CF5",
+              data: [
+                600, 800, 750, 880, 940, 880, 900, 770, 920, 890, 976, 1100,
+              ],
+              pointBackgroundColor: "transparent",
+              pointHoverBackgroundColor: "#365CF5",
+              pointBorderColor: "transparent",
+              pointHoverBorderColor: "#fff",
+              pointHoverBorderWidth: 5,
+              borderWidth: 5,
+              pointRadius: 8,
+              pointHoverRadius: 8,
+              cubicInterpolationMode: "monotone", // Add this line for curved line
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            tooltip: {
+              callbacks: {
+                labelColor: function (context) {
+                  return {
+                    backgroundColor: "#ffffff",
+                    color: "#171717"
+                  };
+                },
+              },
+              intersect: false,
+              backgroundColor: "#f9f9f9",
+              title: {
+                fontFamily: "Plus Jakarta Sans",
+                color: "#8F92A1",
+                fontSize: 12,
+              },
+              body: {
+                fontFamily: "Plus Jakarta Sans",
+                color: "#171717",
+                fontStyle: "bold",
+                fontSize: 16,
+              },
+              multiKeyBackground: "transparent",
+              displayColors: false,
+              padding: {
+                x: 30,
+                y: 10,
+              },
+              bodyAlign: "center",
+              titleAlign: "center",
+              titleColor: "#8F92A1",
+              bodyColor: "#171717",
+              bodyFont: {
+                family: "Plus Jakarta Sans",
+                size: "16",
+                weight: "bold",
+              },
+            },
+            legend: {
+              display: false,
+            },
+          },
+          responsive: true,
+          maintainAspectRatio: false,
+          title: {
+            display: false,
+          },
+          scales: {
+            y: {
+              grid: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                padding: 35,
+                max: 1200,
+                min: 500,
+              },
+            },
+            x: {
+              grid: {
+                drawBorder: false,
+                color: "rgba(143, 146, 161, .1)",
+                zeroLineColor: "rgba(143, 146, 161, .1)",
+              },
+              ticks: {
+                padding: 20,
+              },
+            },
+          },
+        },
+      });
+  
+    </script>
+  </body>
+</html>
